@@ -1,0 +1,147 @@
+/* Contenedor principal */
+.container {
+  display: flex;
+  min-height: 100vh;
+  transition: filter 0.3s ease;
+}
+
+/* Barra lateral */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #141414;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 60px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+  transition: width 0.3s ease;
+}
+
+.sidebar .sidebar-links {
+  padding-left: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #333;
+}
+
+/* Contenido principal */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  width: 100%;
+  transition: filter 0.3s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  position: relative;
+  border-radius: 15px;
+  margin-top: 1%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+/* Tabla */
+.table-container {
+  margin-top: 20px;
+  width: 90%;
+  margin: 20px auto;
+  color: white;
+  overflow-x: auto;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tasks-table {
+  font-size: 1.2rem;
+  width: 100%;
+  border-collapse: separate;
+  table-layout: fixed;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tasks-table th,
+.tasks-table td {
+  padding: 15px 30px;
+  text-align: center;
+  border: 1px solid #444;
+  font-size: 1rem;
+}
+
+.tasks-table th {
+  background-color: #333;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tasks-table td {
+  background-color: #242424;
+}
+
+/* Clases para prioridad */
+.priority-baja {
+  color: green;
+  font-weight: bold;
+}
+
+.priority-media {
+  color: orange;
+  font-weight: bold;
+}
+
+.priority-alta {
+  color: red;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tasks-table {
+    font-size: 1rem;
+  }
+
+  .tasks-table th,
+  .tasks-table td {
+    padding: 10px;
+  }
+
+  .table-container {
+    padding: 10px;
+  }
+}
